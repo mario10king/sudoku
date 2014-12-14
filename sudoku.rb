@@ -4,7 +4,7 @@ class Sudoku
 		board(puzzle)
 	end
 	def board(numbers)
-		game_board = []
+		@game_board = []
 		row = []
 		i = 0
 		n = 0
@@ -12,7 +12,7 @@ class Sudoku
 			x = 0
 			while x < 9
 				row << numbers[n].to_i
-				game_board << row
+				@game_board << row
 				x += 1
 				n += 1
 			end
@@ -20,7 +20,16 @@ class Sudoku
 		end
 		print game_board
 	end
-	def column
+	def solve
+	end
+	def column(number, column)
+		x = 0
+		while x < 9 
+			if @game_board[x][column] == number 
+				return false
+			end
+			x += 1
+		end
 	end
 	def row 
 	end
