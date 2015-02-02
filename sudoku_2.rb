@@ -9,7 +9,6 @@ class Sudoku
 	
 	def solve!
 		for i in 0..8
-			x = 0
 			for x in 0..8
 				if @rows[i][x] == 0
 					for n in 1..9 do
@@ -57,7 +56,6 @@ class Sudoku
 		@boxes = Array.new(9){Array.new}
 		for i in 0..8 
 			for j in 0..2
-				k = 0
 				for k in 0..2
 					row_index = j + (3 * (i / 3))
 					column_index = k + (3 * (i % 3))			
