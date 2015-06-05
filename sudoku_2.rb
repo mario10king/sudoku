@@ -88,6 +88,7 @@ class Sudoku
 	end
 end
 
+# Each consecutive 9 digits represents a row of the Sudoku board, and a 0 represents an empty space.
 sudoku = Sudoku.new('304800000005020008007006000001200900903000401006193800000400200500012300002008706')
 p sudoku.solve!
 
